@@ -38,7 +38,7 @@ why we design like this:
    Which means some utf-8 bytes don't have corresponding unicode points, likt b'\xff'.decode('utf-8') will raise error
 
 - The first 128(0-127) characters (US-ASCII) need one byte(7 bits actually, but we use one byte and throw away one bit)  
-- The next 1920(128-2047) characters, which covers most latin world characters, need two bytes(but $2^{11}$=2048, so we    
+- The next 1920(128-2047) characters, which covers most latin world characters, need two bytes(but \\(2^{11}\\)=2048, so we    
   only need $11(total)=5(byte_1) + 6(byte_2)$
 
 - The three bytes(2048-65535) characters, which covers almost all human languages like CJK(Chinese, Japanese, Korean), we   
