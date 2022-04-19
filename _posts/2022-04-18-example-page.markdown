@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "Post title"
-excerpt: "A nice post"
-date:   2014-07-02 10:00:00
+comments: true
+title:  "UTF-8"
+excerpt: "Explain UTF-8 and implement in python from scratch"
+date:   2022-04-18 10:00:00
+mathjax: false
 ---
 
 # Unicode (or Universal Coded Character Set) Transformation Format – 8-bit
