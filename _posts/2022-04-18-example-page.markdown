@@ -4,7 +4,7 @@ comments: true
 title:  "UTF-8"
 excerpt: "Explain UTF-8 and implement in python from scratch"
 date:   2022-04-18 15:00:00
-mathjax: false
+mathjax: true
 ---
 
 # Unicode (or Universal Coded Character Set) Transformation Format – 8-bit
