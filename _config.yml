@@ -1,3 +1,4 @@
+# SIte settings
 theme: jekyll-theme-cayman
 title: Luoyx Blog
 description: "Explain Like I'm Five | Don't Panic!"
@@ -5,3 +6,12 @@ baseurl: ""
 url: "https://artificialnotimbecile.github.io"
 github_username:  artificialnotimbecile
 
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
