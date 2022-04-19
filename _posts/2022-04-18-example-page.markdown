@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "UTF-8"
 excerpt: "Explain UTF-8 and implement in python from scratch"
-date:   2022-04-19 15:00:00
+date:   2022-04-19 15:00:00 -0800
 mathjax: false
 ---
 
