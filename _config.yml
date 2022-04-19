@@ -9,7 +9,7 @@ github_username:  artificialnotimbecile
 # Build settings
 markdown: kramdown
 permalink: pretty
-
+timezone: Asia/Shanghai
 highlighter: rouge
 kramdown:
   input: GFM
