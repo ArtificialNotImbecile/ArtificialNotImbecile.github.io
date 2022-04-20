@@ -1,0 +1,3 @@
+[submodule "notes/cryptos"]
+	path = notes/cryptos
+	url = https://github.com/karpathy/cryptos.git
