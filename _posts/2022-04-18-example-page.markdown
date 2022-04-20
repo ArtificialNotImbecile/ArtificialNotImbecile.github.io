@@ -110,7 +110,8 @@ print(f"The encoded string in hex is: {', '.join(all_hex)}")
 print(f"Check result: s.encode('utf-8')=={s.encode('utf-8')}")
 
 ```
-##### And the utput is like this:     
+*And the output looks like this:*     
+
 Start decoding: 😳  
 Code points is(hex): 0x1f633    
 Code points is(dec): 128563 
