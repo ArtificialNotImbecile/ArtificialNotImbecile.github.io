@@ -7,11 +7,11 @@ date:   2022-04-18 15:00:00
 mathjax: true
 ---
 
-# Unicode (or Universal Coded Character Set) Transformation Format – 8-bit
+### Unicode (or Universal Coded Character Set) Transformation Format – 8-bit
 1. Code points with lower numerical values, which tend to occur more frequently, are encoded using fewer bytes
 2. backward compatible with ascii
 
-# Encoding
+### Encoding
 
 |First code poin | Last code point | Byte 1 | Byte 2 | Byte 3 | Byte 4|
 | --- | --- | --- | --- | --- | ---|
@@ -47,7 +47,7 @@ why we design like this:
 - The four bytes(65535-111411) characters covers things like emojis, for [surrogate utf-16](https://stackoverflow.com/questions/52203351/why-unicode-is-restricted-to-0x10ffff), only $111411 = (16 + 1)\times2^{16} -1$ is used. 
 
 
-# Example && Implementation
+### Example && Implementation
 
 
 
@@ -83,10 +83,7 @@ def complete_bytes(filled_bin, order):
     else:
         raise ValueError
     return all_bin
-```
 
-
-```python
 from termcolor import colored
 s = '😳'
 print(f'Start decoding: {s}')
@@ -113,13 +110,13 @@ print(f"The encoded string in hex is: {', '.join(all_hex)}")
 print(f"Check result: s.encode('utf-8')=={s.encode('utf-8')}")
 
 ```
-
-    Start decoding: 😳
-    Code points is(hex): 0x1f633
-    Code points is(dec): 128563
-    Code points is(bin): [33m11111011000110011[0m
-    Use 4 bytes encoding, so we need to pad binary into 21 bitsafter padding, code points is: [32m0000[0m[33m11111011000110011[0m
-    The encoded string in binary is: 11110000, 10011111, 10011000, 10110011
-    The encoded string in hex is: 0xf0, 0x9f, 0x98, 0xb3
-    Check result: s.encode('utf-8')==b'\xf0\x9f\x98\xb3'
-
+##### And the utput is like this:     
+Start decoding: 😳  
+Code points is(hex): 0x1f633    
+Code points is(dec): 128563 
+Code points is(bin): <span style="color:orange">11111011000110011</span>  
+Use 4 bytes encoding, so we need to pad binary into 21 bitsafter padding, code points is:
+    <span style="color:green">0000</span><span style="color:orange">11111011000110011</span>  
+The encoded string in binary is: 11110000, 10011111, 10011000, 10110011 
+The encoded string in hex is: 0xf0, 0x9f, 0x98, 0xb3    
+Check result: s.encode('utf-8')==b'\xf0\x9f\x98\xb3'    
