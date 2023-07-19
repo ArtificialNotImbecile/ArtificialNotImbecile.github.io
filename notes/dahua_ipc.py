@@ -71,7 +71,6 @@ class DahuaRpc(object):
         Also referenced:
         https://gist.github.com/avelardi/1338d9d7be0344ab7f4280618930cd0d
         """
-
         # login1: get session, realm & random for real login
         url = 'http://{}/RPC2_Login'.format(self.host)
         method = "global.login"
@@ -79,8 +78,9 @@ class DahuaRpc(object):
                   'password': "",
                   'clientType': "Dahua3.0-Web3.0"}
         r = self.request(method=method, params=params, url=url)
-
-        self.session_id = r['session']
+        # this will be valid forever, before the device is rebooted, so we don't need to re-login
+        # even if we restart the script, this is weird, but it works
+        self.session_id = r['session'] 
         realm = r['params']['realm']
         random = r['params']['random']
 
