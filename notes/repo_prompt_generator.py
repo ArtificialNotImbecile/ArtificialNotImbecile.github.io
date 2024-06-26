@@ -91,6 +91,7 @@ if __name__ == "__main__":
         "node_modules",
     ]
     include_files = [
+        ".vue",
         "*.js",
         "*.html",
         "*.css",
